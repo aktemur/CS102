@@ -1,4 +1,4 @@
-package week01.bankAccount.v5;
+package week02.bankAccount.v4;
 
 public class Account {
 	int number;

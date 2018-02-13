@@ -1,4 +1,4 @@
-package week01.bankAccount.v4;
+package week02.bankAccount.v4;
 
 public class AccountTest {
 	public static void main(String[] args) {
