@@ -1,24 +1,24 @@
-package week03.bankAccount.v9;
+package week04.bankAccount.v10;
 
 public class Customer {
     private String name;
     private Account account;
 
-    Customer(String n, Account a) {
+    public Customer(String n, Account a) {
         name = n;
         account = a;
     }
 
-    void deposit(double d) {
+    public void deposit(double d) {
         account.deposit(d);
     }
 
-    void report() {
+    public void report() {
         System.out.println("Customer: " + name);
         account.report();
     }
 
-    Account getAccount() {
+    public Account getAccount() {
         return account;
     }
 }

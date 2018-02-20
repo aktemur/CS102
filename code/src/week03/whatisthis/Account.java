@@ -1,19 +1,25 @@
 package week03.whatisthis;
 
 public class Account {
-    private int number;
+    private int id;
     private double balance;
     private String currency;
 
     // Constructor
-    public Account(int number, double balance, String currency) {
-        this.number = number;
+    public Account(int id, double balance, String currency) {
+        this.id = id;
         this.balance = balance;
         this.currency = currency;
     }
 
-    public Account(int number, String currency) {
-        this(number, 0, currency);
+    public Account(int id, String currency) {
+        // "this" in this case does not refer to an object,
+        // it refers to another constructor.
+        this(id, 0, currency);
+    }
+
+    public Account(int id) {
+        this(id, "TL");
     }
 
     public void deposit(double d) {
@@ -22,7 +28,7 @@ public class Account {
     }
 
     public void report() {
-        System.out.println("Account " + this.number
+        System.out.println("Account " + this.id
                 + " has " + this.balance
                 + " " + this.currency + ".");
     }

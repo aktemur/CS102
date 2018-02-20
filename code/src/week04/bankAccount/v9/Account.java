@@ -1,4 +1,4 @@
-package week03.bankAccount.v10;
+package week04.bankAccount.v9;
 
 public class Account {
     private int number;
@@ -23,8 +23,14 @@ public class Account {
                 + " " + currency + ".");
     }
 
-    public int getAccountNumber() {
-        return number;
+    void setCurrency(String newCurrency) {
+        if (currency.equals("TL") && newCurrency.equals("USD")) {
+            balance = balance / 1.50;
+        }
+        if (currency.equals("USD") && newCurrency.equals("TL")) {
+            balance = balance * 1.50;
+        }
+        currency = newCurrency;
     }
 }
 
