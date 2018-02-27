@@ -29,9 +29,9 @@ public class Bank {
             Account account = customer.getAccount();
             if (account.getAccountNumber() == accountNumber) {
                 customers.remove(customer);
+                return;
             }
         }
-
     }
 
     public void display() {
