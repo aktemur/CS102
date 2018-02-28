@@ -1,7 +1,5 @@
 *~
-/code/.idea/workspace.xml
-/code/.idea/uiDesigner.xml
-/code/out
-/code/src/lecture/
-/code/src/week01/bankAccount/lecture/
-/code/src/week01/bankAccount/quiz01
+/.idea/workspace.xml
+/.idea/uiDesigner.xml
+/out
+/src/lecture/
