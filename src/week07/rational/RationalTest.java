@@ -1,4 +1,4 @@
-package week07;
+package week07.rational;
 
 /**
  * This class tests the Rational class by performing

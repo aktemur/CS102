@@ -1,4 +1,4 @@
-package week07;
+package week07.rational;
 
 /**
  * The Rational class is used to represent rational numbers, which
