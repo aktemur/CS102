@@ -1,13 +1,13 @@
 package week11.snake2;
 
-public class Food extends Item {
-    public Food(int x, int y) {
+public class Poison extends Item {
+    public Poison(int x, int y) {
         super(x, y);
     }
 
     @Override
     public void performAction(SnakeGame game) {
-        game.getSnake().grow();
+        game.getSnake().shrink();
         game.relocate(this);
     }
 }

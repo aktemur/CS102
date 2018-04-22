@@ -20,7 +20,7 @@ public class GameView extends JPanel {
         super.paint(g);
         drawGridOn(g);
         drawSnakeOn(g);
-        drawFoodOn(g);
+        drawItemsOn(g);
     }
 
     private void drawGridOn(Graphics g) {
@@ -42,11 +42,17 @@ public class GameView extends JPanel {
         }
     }
 
-    private void drawFoodOn(Graphics g) {
-        g.setColor(Color.GREEN);
-        Food food = game.getFood();
-        g.fillOval(food.getX() * CELL_SIZE, food.getY() * CELL_SIZE,
-                CELL_SIZE, CELL_SIZE);
+    private void drawItemsOn(Graphics g) {
+        for (Item item : game.getItems()) {
+            if (item instanceof Food) {
+                g.setColor(Color.GREEN);
+            } else if (item instanceof Poison) {
+                g.setColor(Color.RED);
+            } else {
+                g.setColor(Color.BLACK);
+            }
+            g.fillOval(item.getX() * CELL_SIZE, item.getY() * CELL_SIZE, CELL_SIZE, CELL_SIZE);
+        }
     }
 }
 

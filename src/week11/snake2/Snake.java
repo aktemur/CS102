@@ -49,8 +49,15 @@ public class Snake {
         nodes.add(newNode);
     }
 
-    public boolean canEat(Food food) {
+    public void shrink() {
+        if (nodes.size() > 1) {
+            // Remove the last node
+            nodes.remove(nodes.size() - 1);
+        }
+    }
+
+    public boolean collidesWith(Item item) {
         SnakeNode head = nodes.get(0);
-        return head.getX() == food.getX() && head.getY() == food.getY();
+        return head.getX() == item.getX() && head.getY() == item.getY();
     }
 }

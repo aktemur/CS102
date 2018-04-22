@@ -23,9 +23,12 @@ public class Main {
 
         // Forever keep moving
         while(true) {
+            if (game.isFinished())
+                break;
             game.moveOneStep();
             view.repaint();
-            Thread.currentThread().sleep(200);
+            Thread.currentThread().sleep(400);
         }
+        JOptionPane.showMessageDialog(null, "YOU LOST!!!");
     }
 }
